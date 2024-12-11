@@ -1,26 +1,104 @@
 <html>
-	<head>
-		<title>Jake</title>
-		<style>
-			body{
-				font-family: arial;
-				background-colour: #00ffbf;
-			}	
-			
-			.title{
-				text-align: center;
-				padding: 15px;
-				border-style: solid;
-				border: 2px;
-				border-color: black;
-				font-family: arial black;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="title">
-			<h1>The Greatness of Jake</h1>
-		</div>
-		<b style = color: red; text-align: center;>Jake is a rare specimen of a very cool sigma</b>
-	</body>
+  <head>
+    <title>Computer Science</title>
+    <style>
+      body{
+        text-align: center;
+        background-color: #3b3a8c;
+      }
+      
+      #heading{
+        background-color:black;
+        color: white;
+        font-family:arial black;
+        border-style: solid;
+        border-color: white;
+        border-width: 1px;
+        padding: 0px;
+      }
+      
+      #button{
+        background-color: black;
+        color: white;
+        transform: translateX(-200%);
+        border: solid;
+        border-width: 1px;
+      }
+      
+      #main{
+        color: white;
+        width: 100%;
+        transform: translateY(40px);
+      }
+      
+      #navbutton{
+        border-style: solid;
+        border-width: 1px;
+        border-color: white;
+        background-color: black;
+        color:white;
+        transform: translateY(20px);
+        height: 30px;
+        width: 70px;
+      }
+      
+    </style>
+  </head>
+  <body id = "body">
+    <div id = "heading">
+      <h1>I LOVE WHITGIFT</h1>
+    </div>
+    <div id = "nav">
+     <button id = "navbutton">home</button>
+     <button id = "navbutton">about us</button>
+    </div>
+    <div id = "main">
+      <button id = "button">Click For Old</button>
+      <p>whitgift is a very good school and always wins everything</p>
+    </div>
+    
+    <script>
+    
+    let heading = document.getElementById('heading');
+    let button = document.getElementById('button');
+    let body = document.getElementById('body');
+    
+        button.addEventListener('mouseenter', () => {
+      if(heading.style.backgroundColor === 'black') {
+        button.style.color = 'black';
+        button.style.backgroundColor = 'white';
+      } else {
+        
+      }
+    });
+    
+    button.addEventListener('mouseleave', () => {
+      if(heading.style.backgroundColor === 'black') {
+        button.style.color = 'white';
+        button.style.backgroundColor = 'black';
+      } else {
+        
+      }
+    });
+
+    button.addEventListener('click', () => {
+      if(heading.style.backgroundColor === 'black') {
+        heading.style.backgroundColor = 'blue';
+        heading.style.fontFamily = 'times new roman';
+        button.textContent = 'Click For New';
+        body.style.backgroundColor = 'blue';
+        button.style.backgroundColor = 'transparent';
+        button.style.color = 'white';
+      } else {
+        heading.style.backgroundColor = 'black';
+        heading.style.fontFamily = 'arial black';
+        button.textContent = 'Click For Old';
+        body.style.backgroundColor = '#3b3a8c';
+        
+
+      }
+    });
+    
+    </script>
+  </body>
 </html>
